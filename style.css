@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Redressed&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Redressed', cursive;    
+}
+body{
+    overflow: hidden;
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #e5383b;
+}
+section::before{
+    content: '';
+    position: absolute;
+    width: 40vw;
+    height: 40vw;
+    border: 3vw solid #d00000;
+    border-radius: 50%;
+    box-shadow:  0 0 0 1vw #9d0208,
+                    0 0 0 1.3vw gray;
+}
+h2{
+    position: absolute;
+    font-size: 10vw;
+    color: white;
+    text-align: center;
+    line-height: 2em;
+    z-index: 100;
+    transform: skewY(-10deg);
+    text-shadow:  1px 1px 0 gray,
+    2px 2px 0 gray,
+    3px 3px 0 gray,
+    4px 4px 0 gray,
+    5px 5px 0 gray,
+    6px 6px 0 gray,
+    7px 7px 0 gray,
+    8px 8px 0 gray,
+    9px 9px 0 gray,
+    20px 20px 0 rgba(0, 0, 0, 0.3);
+    animation: animate 3s ease-in-out infinite;
+}
+h2 span{
+    font-weight: 750;
+    font-size: 3em;
+    text-shadow: 1px 1px 0 gray,
+    2px 2px 0 gray,
+    3px 3px 0 gray,
+    4px 4px 0 gray,
+    5px 5px 0 gray,
+    10px 10px 0 rgba(0, 0, 0, 0.3);
+}
+@keyframes animate{
+    0%,100%{
+        transform: skewY(-10deg) translate(0,-20px);
+    }
+    50%{
+        transform: skewY(-10deg) translate(0,20px);
+    }
+}
+section i{
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+    box-shadow: 0 0 10px white,
+    0 0 20px white,
+    0 0 30px white,
+    0 0 40px white;
+    animation: stars linear infinite;
+}
+@keyframes stars{
+    0%{
+        opacity: 0;
+    }
+    10%{
+        opacity: 1;
+    }
+    90%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+}

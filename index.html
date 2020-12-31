@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+
+    <section>
+        <h2>Happy New Year!<br><span>2021</span></h2>
+    </section>
+    <script type="text/javascript">
+
+        function stars() {
+            const count = 400;
+            const section = document.querySelector('section');
+            var i = 0;
+            while (i < count) {
+                const star = document.createElement('i');
+                const x = Math.floor(Math.random() * window.innerWidth)
+                const y = Math.floor(Math.random() * window.innerHeight)
+
+                const size = Math.random() * 4;
+                star.style.left = x + 'px';
+                star.style.top = y + 'px';
+                star.style.width = 2 + size + 'px';
+                star.style.height = 2 + size + 'px';
+
+                const duration = Math.random() * 2;
+                star.style.animationDuration = 2 + duration + 's'
+                star.style.animationDelay = duration + 's'
+
+                section.appendChild(star);
+                i++
+            }
+        }
+        stars();
+    </script>
+</body>
+
+</html>
